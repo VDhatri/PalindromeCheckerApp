@@ -24,6 +24,19 @@ class Palindrome{
         }
     }
 
+    void checkStringReverse(String s){
+        int size = s.length();
+        String reverse = "";
+        for(int i = size - 1 ; i >= 0 ; i++){
+            reverse += s.charAt(i);
+        }
+        if(s.equals(reverse)){
+            System.out.println("The given string is a palindrome");
+        }else{
+            System.out.println("The given string is not a palindrome");
+        }
+    }
+
 
 }
 
@@ -31,6 +44,7 @@ public class PalindromeCheckerApp {
     public static void main(String[] args){
         Palindrome p = new Palindrome();
         p.start();
+        p.checkStringPalindrome("abccba");
         p.checkStringPalindrome("abccba");
     }
 }
